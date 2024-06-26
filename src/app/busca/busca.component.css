@@ -1,0 +1,73 @@
+.form-group{
+    align-items: center;
+    margin: 1%;
+    background-color: #F5EFE6;
+}
+
+.btn-primary{
+    align-items: center;
+    margin-left: 1%;
+    margin-top: 0.1%;
+    margin-bottom: 0.1%;
+  }
+main{
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+h6{
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.row{
+
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.card-img-top{
+    height: 350px;
+    object-fit: cover;
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+    border: 4px double rgb(164, 164, 164);
+}
+
+.card col-4{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pesquisa{
+    margin-left: 5%;
+}
+
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .card-img-top {
+        width: 90%;
+        height: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,19 @@
+<main>
+    
+    <div class="form-group">Digite o nome do produto:<input type="text" [(ngModel)]="busca" class="form-control"></div>
+    <button (click)="pesquisar()" type="submit" class="btn btn-primary">Pesquisar</button>
+    <h6>{{mensagem}}</h6>
+
+    <div class="row">
+        <div *ngFor="let item of lista" class="card col-4" style="width:400px">
+            <img class="card-img-top" src="./assets/{{item.codigo}}.jpg" width="46px" alt="Card image" (click)="abrirDetalhe(item);">
+            <div class="card-body">
+                <h4 class="card-title">{{item.nome}}</h4>
+                <p class="card-text">R$ {{item.valor}}</p>
+                <button *ngIf="item.estoque>0" class="btn btn-primary" (click)="comprar(item);">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+</main>
+

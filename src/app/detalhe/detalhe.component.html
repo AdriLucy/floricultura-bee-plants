@@ -1,0 +1,15 @@
+
+<main class="container">
+    <img src="./assets/{{obj.codigo}}.jpg" width="350px">
+    <div class="content">
+        <h2>{{obj.nome}}</h2>
+        <p>{{obj.descritivo}}</p>
+        <div class="valor">R$ {{obj.valor}}</div>
+        <div class="promo" *ngIf="obj.promo>0">
+            Por R$ {{obj.promo}}
+        </div>
+        <h3 *ngIf="obj.estoque==0">Sem Estoque</h3>
+        <br/>
+        <button *ngIf="obj.estoque>0" class="btn btn-primary" (click)="comprar(obj);">Comprar</button>
+    </div>
+</main>

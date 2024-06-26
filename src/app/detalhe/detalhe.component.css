@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    margin: 5%;
+}
+
+img {
+    width: 350px;
+    margin-right: 20px; /* Espaço entre a imagem e o conteúdo à direita */
+    border: 4px double rgb(0, 0, 0);
+}
+
+.content {
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+    line-height: 1.5;
+}
+ .promo{
+    font-weight: bold;
+    font-size: large;
+ }
+
+ 
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+    }
+
+    img {
+        margin-bottom: 10px; /* Reduz o espaço abaixo da imagem */
+    }
+
+    .content {
+        padding-left: 0; /* Remove o espaçamento à esquerda em telas menores */
+        max-width: 90%
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        max-width: 90%; /* Ajusta a largura da imagem para ocupar toda a largura do container */
+    }
+}

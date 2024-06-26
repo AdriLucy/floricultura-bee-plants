@@ -1,0 +1,45 @@
+body {
+    background-color: #F5EFE6;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .btn-success {
+    margin-top: 20px;
+  }
+
+  .btn-primary{
+    margin: 10px;
+  }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+      margin-top: 10px; /* Reduz a margem superior em telas menores */
+  }
+
+  .btn-success {
+      margin-top: 10px; /* Reduz a margem superior em telas menores */
+  }
+
+  .btn-primary {
+      margin: 5px; /* Reduz a margem dos botões em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      margin-top: 5px; /* Reduz ainda mais a margem superior em telas muito pequenas */
+  }
+
+  .btn-success {
+      margin-top: 5px; /* Reduz ainda mais a margem superior em telas muito pequenas */
+  }
+
+  .btn-primary {
+      margin: 3px; /* Reduz ainda mais a margem dos botões em telas muito pequenas */
+  }
+}

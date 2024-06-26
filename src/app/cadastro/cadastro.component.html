@@ -1,0 +1,24 @@
+    <br/>
+    <h4 *ngIf="obj.codigo>0" >Boas vindas, {{obj.nome}} !!!</h4>
+    <h4 *ngIf="obj.codigo==0" >Insira as informações abaixo para fazer o cadastro</h4>
+    <!-- <div class="form-group">Codigo:<input type="text" [(ngModel)]="obj.codigo" class="form-control"></div> -->
+    <div class="form-group">Nome:<input type="text" [(ngModel)]="obj.nome" class="form-control"></div>
+    <div class="form-group">Email:<input type="email" [(ngModel)]="obj.email" class="form-control"></div>
+    <div class="form-group">Telefone:<input type="text" [(ngModel)]="obj.telefone" class="form-control"></div>
+    <div class="form-group">CPF:<input type="text" [(ngModel)]="obj.documento" class="form-control"></div>
+    <div class="form-group">Cep:<input type="text" [(ngModel)]="obj.cep" class="form-control"></div>
+    <div class="form-group">Cidade:<input type="text" [(ngModel)]="obj.cidade" class="form-control"></div>
+    <div class="form-group">Estado:<input type="text" [(ngModel)]="obj.estado" class="form-control"></div>
+    <div class="form-group">Logradouro:<input type="text" [(ngModel)]="obj.logradouro" class="form-control"></div>
+    <div class="form-group">Complemento:<input type="text" [(ngModel)]="obj.complemento" class="form-control"></div>
+    <div class="form-group">Senha:<input type="password" [(ngModel)]="obj.senha" class="form-control"></div>
+    
+    <div class="text-center">
+        <button *ngIf="obj.codigo==0" (click)="gravar()" onclick="alert('Cadastro realizado')" type="submit" class="btn btn-primary">Cadastrar</button>
+        <button *ngIf="obj.codigo>0"(click)="alterar()" onclick="alert('Alteração realizada')" type="submit" class="btn btn-primary">Alterar</button>
+        <button *ngIf="obj.codigo>0"(click)="remover()" onclick="alert('Removação realizada')" type="submit" class="btn btn-primary">Remover</button>
+        <button *ngIf="obj.codigo>0"(click)="fazerLogout()" onclick="alert('Logout realizado!')" type="submit" class="btn btn-primary">Logout</button>
+        <button *ngIf="obj.codigo==0"(click)="limpar()" onclick="alert('Dados limpos')" type="submit" class="btn btn-primary">Limpar</button>
+    </div>
+    
+

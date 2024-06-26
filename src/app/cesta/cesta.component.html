@@ -1,0 +1,63 @@
+<main>
+  <h1>Cesta de compras</h1>
+  <div class="alert alert-warning" *ngIf="mensagem!=''">
+    {{mensagem}}
+  </div>
+  <table class="table" *ngIf="lista.length>0">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Qtd</th>
+        <th>Valor Unitário</th>
+        <th>Valor Total</th>
+      </tr>
+    </thead>  
+    <tbody>
+      <tr *ngFor="let item of lista">
+        <td>{{item.nomeProduto}}</td>
+        <td>{{item.qtd}}</td>
+        <td>R$ {{item.valor}}</td>
+        <td>R$ {{item.total}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Total:</th><th></th><th></th>
+        <th>R$ {{totalCesta}}</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="button-container">
+    <button class="btn btn-danger" (click)="limpar()">Limpar Cesta</button>
+    <button *ngIf="cesta.codigoCliente>0" class="btn btn-primary" (click)="finalizar()">Finalizar</button>
+
+  </div>
+  <br>
+  <p><a *ngIf="!cesta?.codigoCliente" href="./login">Realize login ou cadastro para finalizar a compra</a></p>
+  <br>
+  <h2 *ngIf="cesta.codigoCliente>0">Pedidos Anteriores</h2>
+  <div class="alert alert-warning" *ngIf="mensagem!=''" {{mensagemPedido}}>
+    
+  </div>
+  <table class="table" *ngIf="lista2.length>0">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Data Pedido</th>
+        <th>Entrega</th>
+        <th>Status</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedido of lista2">
+        <td>{{pedido.codigo}}</td>
+        <td>{{pedido.dataPedido}}</td>
+        <td>{{pedido.entrega}}</td>
+        <td>{{pedido.status}}</td>
+        <td>R$ {{pedido.total}}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>
